@@ -60,12 +60,12 @@ button.pages{
   color: #000000;
 }
 button.edit-btn {
-  background-color: #28a745; /* Green */
+  background-color: #28a745; 
   color: #fff;
 }
 
 button.delete-btn {
-  background-color: #dc3545; /* Red */
+  background-color: #dc3545; 
   color: #fff;
 }
 
@@ -73,8 +73,15 @@ button:hover {
   opacity: 0.6;
 }
 
+.table-container {
+  max-height: 500px; 
+  overflow-y: auto; 
+  border-radius: 5px; 
+  margin: 20px 0; 
+}
+
 table {
-  width: 90%;
+  width: 100%;
   margin: 2rem auto;
   border-collapse: collapse;
 }
@@ -85,7 +92,44 @@ table th, table td {
   text-align: center;
 }
 
-thead {
-  background-color: #007bff;
-  color: #fff;
+
+
+thead th {
+  position: sticky; 
+  top: 0; 
+  background-color: #007bff; 
+  z-index: 2; 
+  padding: 10px;
+  border: 1px solid #ddd; 
 }
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd; 
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; 
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* scrollbar */
+s
+.table-container::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 4px; 
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
